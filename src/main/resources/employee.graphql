@@ -1,0 +1,24 @@
+schema{
+	query: Query
+}
+
+type Query {
+	allEmployees: [Employee]
+	employee(empId: String): Employee
+}
+
+type Address {
+	addressLine1: String
+	addressLine2: String
+	pincode: Int
+	landMarg: String
+	state: String
+	country: String
+}
+type Employee {
+	empId: String
+	empName: String
+	empAddress: Address
+	isPermanent: Boolean
+	empTokenNumber: String
+}
